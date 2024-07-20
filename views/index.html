@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <link rel="stylesheet" href="custom.css">
+    <title>HANDLEBAR JS</title>
+</head>
+<body>
+<!-- Main Container -->
+<div class="outer_shell"> 
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container-fluid">
+            <!-- Navigation bar left section -->
+            <div class="navbar-container-one">
+                <div class="logo-container">
+                    <div class="logo">
+                        <img src="asset\FashionHub.png">
+                    </div>
+                </div>
+
+                <div class="menu-items">
+                    <li>Category</li>
+                    <li>Brands</li>
+                    <li>Contact</li>
+                    <li>FAQs</li>
+                </div>
+                <!-- Mobile Menu List -->
+                <div class="menu_hamburger">
+                    <img src="asset/hamburger_icon.png">
+                    <ul class="ham_menu_list">
+                        <li>Category</li>
+                        <li>Brands</li>
+                        <li>Contact</li>
+                        <li>FAQs</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Navigation bar right section -->
+            <div class="navbar-container-two">
+                <div class="cart-image">
+                    <img src="asset/bag.png">
+                </div>
+
+                <div class="notification_icon">
+                    <img src="asset/bell.png">
+                </div>
+
+                <div class="user_details">
+                    <div class="user_icon">
+                        <img src="asset/user_img.png">
+                    </div>
+
+                    <div class="user_names">
+                        <span class="greetings">Good Morning!</span><br/>
+                        <span class="name">Mini Dubey</span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section of the page -->
+    <div class="bg_banner">
+        <div class="banner_heading">
+             <h1>Grab Upto 50% Off On<br/>
+                Selected Headphone</h1>
+            <button class="banner_button">Buy Now</button>
+        </div>
+        <div class="banner_img">
+            <img src="asset/girl_img.png">
+        </div>
+    </div>
+    <!-- Product filters -->
+    <div class="filter_section">
+        <!-- Product filter left section -->
+        <div class="filter_section_one">
+            <button class="filter_button">Headphone Type&nbsp;&nbsp;<i class="fas fa-chevron-down" style="color:black;"></i></button>
+            <button class="filter_button">Price&nbsp;&nbsp;<i class="fas fa-chevron-down" style="color:black;"></i></button>
+            <button class="filter_button">Review&nbsp;&nbsp;<i class="fas fa-chevron-down" style="color:black;"></i></button>
+            <button class="filter_button">Color&nbsp;&nbsp;<i class="fas fa-chevron-down" style="color:black;"></i></button>
+            <button class="filter_button">Material&nbsp;&nbsp;<i class="fas fa-chevron-down" style="color:black;"></i></button>
+            <button class="filter_button">Offer&nbsp;&nbsp;<i class="fas fa-chevron-down" style="color:black;"></i></button>
+        </div>
+        <!-- Product filter right section -->
+        <div class="filter_section_two">
+            <button class="filter_button">Headphone Type&nbsp;&nbsp;<i class="fas fa-chevron-down" style="color:black;"></i></button>
+        </div>
+    </div>
+    <!-- Product listing section -->
+    <div class="box">
+        <!-- Creating Handlebar Template -->
+        <script id="employee-template" type="text/x-handlebars-template">
+            {{#each products}}
+                <div class="frames">
+                    <img src="asset\love.png" class="wishlist_class">
+                        <div class="img-container">
+                            <img src={{image}}>
+                        </div>
+                        <div class="title-price">
+                            <h1>{{title}}</h1>
+                            <p>Rs.{{price}}</p><br/>
+                        </div>
+                        <div class="two_buttons">
+                            <button class="button_one">
+                                Add To Cart
+                            </button>
+                            <button class="button_two">
+                                Add Shortlist
+                            </button>
+                        </div>
+                </div>
+            {{/each}}
+        </script>
+    </div>
+<!-- Javascript file -->
+<script src="script.js"></script>
+</div>   
+</body>
+</html>  
